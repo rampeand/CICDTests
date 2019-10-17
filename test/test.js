@@ -1,10 +1,11 @@
+require('dotenv').config();
 app = require('../app');
 var supertest = require("supertest");
 var should = require("should");
-
+var host = "http://localhost:"+process.env.PORT;
 // This agent refers to PORT where the program is running.
 
-var server = supertest.agent("http://localhost:3000");
+var server = supertest.agent(host);//3000");
 
 // UNIT test begin
 
@@ -23,5 +24,4 @@ describe("Index render test",function(){
       done();
     });
   });
-
 });
