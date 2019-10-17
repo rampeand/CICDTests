@@ -1,0 +1,27 @@
+{
+  "name": "cicdtests",
+  "version": "1.0.0",
+  "description": "CICD testgrounds",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rampeand/CICDTests.git"
+  },
+  "author": "Andre Rampersad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rampeand/CICDTests/issues"
+  },
+  "homepage": "https://github.com/rampeand/CICDTests#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
+  }
+}
