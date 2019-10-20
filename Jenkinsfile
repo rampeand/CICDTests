@@ -26,7 +26,7 @@ pipeline {
                 }
             }   
             steps {
-                git 'https://github.com/rampeand/CICDTests.git'
+                checkout scm
                 sh 'npm install mocha'
                 sh 'npm test'
             }
@@ -36,7 +36,7 @@ pipeline {
                  label 'master'
              }
              steps {   
-                git 'https://github.com/rampeand/CICDTests.git'
+                checkout scm
                 sh 'docker build -t cicd_image .'
                 sh 'docker run --name cicdtest -d -p 3000:3000 cicd_image'
             }
